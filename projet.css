@@ -62,8 +62,9 @@ h1 {
   }
 
   .project-details ul{
-      padding-bottom: 5%;
+      padding-bottom:  7%;
   }
+
 
   .project-details.open {
     /* This class is optional if using JS to set height */
