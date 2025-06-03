@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4b5c6b;
+    color: #ffcc00;
+  }
+  
+  /* Titre principal */
+  header {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  /* Grille responsive avec cartes élargies */
+  .competence-grid {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 5vw;
+    max-width: 1600px;
+    margin: auto;
+  }
+  
+  /* Style des catégories */
+  .competence-category {
+    max-width: 40%;
+    background-color: #3c4c5a;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .competence-category:hover {
+    transform: translateY(-5px);
+    background-color: #34414d;
+  }
+  
+  .competence-category h2 {
+    font-size: 22px;
+    color: #ffffff;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .competence-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #f5f5f5;
+    margin: 0;
+  }
+  
+  .competence-category li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  /* Responsive tuning */
+  @media (max-width: 768px) {
+    .competence-grid {
+      padding: 30px 4vw;
+      gap: 20px;
+    }
+  
+    .competence-category {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    .competence-category h2 {
+      font-size: 18px;
+    }
+  
+    .competence-category li {
+      font-size: 14px;
+    }
+  }
+  
+  

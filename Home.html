@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="navBar.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <nav>
+    <a href="Home.html" class="nav-link active">Accueil</a>
+    <a href="Projet.html" class="nav-link">Projets</a>
+    <a href="Competences.html" class="nav-link">Compétences</a>
+  </nav>
+
+  <header>
+    <h1>BIENVENU SUR MON PORTFOLIO</h1>
+  </header>
+
+  <section class="section">
+    <div>
+      
+      <button class="toggle-btn" onclick="toggleAbout()">
+        <span>A Propos de moi</span>
+        <span id="toggle-symbol">+</span>
+      </button>
+    </div>
+
+    <div id="about" class="about-content">
+      <div class="presentation">
+        <h3>Présentation</h3>
+        <p>Nom : GUICHERD-CALLIN</p>
+        <p>Prénom : Macéo</p>
+        <p>Activité : Etudiant en informatique</p>
+        <div class="info">
+            <div>
+                <h3>Parcours :</h3>
+                <ul>
+                    <li>1er année BUT informatique | IUT2 Grenoble</li>
+                    <li>Bac Générale Math NSI | Lycée Philibert Delorme </li>
+                </ul>
+            </div>
+            <div>
+                <h3>passion :</h3>
+                <ul>
+                    <li>Cinéma</li>
+                    <li>Escalade</li>
+                    <li>Littérature</li>
+                    <li>Théâtre</li>
+                    <li>Jeux-Vidéo</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <p>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Contactez-moi :</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="maceo.guicherd-callin@etu.univ-grenoble-alpes.fr">maceo.guicherd-callin@etu.univ-grenoble-alpes.fr</a></li>
+        <li><i class="fas fa-phone"></i> <a href="tel:+33624195280">+33 6 24 19 52 80</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  
+
+  <script>
+    function toggleAbout() {
+      const about = document.getElementById("about");
+      const symbol = document.getElementById("toggle-symbol");
+      about.classList.toggle("open");
+      symbol.innerText = about.classList.contains("open") ? "−" : "+";
+    }
+  </script>
+
+</body>
+</html>
+
+

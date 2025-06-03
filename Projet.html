@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets</title>
+  <link rel="stylesheet" href="navBar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="projet.css">
+
+</head>
+<body>
+
+  <nav>
+    <a href="Home.html" class="nav-link">Accueil</a>
+    <a href="Projet.html" class="nav-link active">Projets</a>
+    <a href="Competences.html" class="nav-link">Compétences</a>
+  </nav>
+
+  <h1>Projets</h1>
+
+  <div class="projects-container">
+
+    <!-- Projet 1 -->
+    <div class="project-card">
+      <div class="project-header" onclick="toggleDetails(this)">
+        <span> <h3>Classification automatique</h3>
+        </span>
+        <button class="toggle-btn"><span class="toggle-symbol">+</span></button>
+      </div>
+      <div class="project-details">
+        <ul>
+          <li>Création et comparaisons de différents algorithmes ayant pour but de trier des dépêches.</li>
+          <ul></ul>
+          <li>Notions : </li>
+          <ul>
+            <li>Implémenter des conceptions simples</li>
+            <li>Faire des essais et évaluer leurs résultats en regard des spécifications</li>
+            <li>Comparer des algorithmes pour des problèmes classiques</li> 
+            <li>Analyser un problème avec méthode</li>
+          </ul>
+          <li>Compétences technique : </li>
+          <ul>
+            <li>Java avec IDE IntelliJ</li>
+            <li>Git pour l’aspect travail en groupe 
+            </li>
+          </ul>
+          <li>Equipe de 2</li>
+          <ul>
+            <li>Travail en groupe : 
+              Nous avons implémenté et testé différent moyen de trier des dépêches, dans le langage Java. Nous avons dû commencer par créer les algorithmes et d’ensuite calculer leurs coûts algorithmiques ainsi que de les outiller afin de voir leurs temps d'exécution et pouvoir les comparer. Un autre critère pour les comparer a été le taux de réussite de chaque méthode.
+            </li>
+            <li>travail personnelle : </li>
+            Mon rôle c’est concentré sur la méthode des K plus proche voisins ainsi que sur l’outillage de chaque fonction des programmes dans le but de les comparer.
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-card">
+      <div class="project-header" onclick="toggleDetails(this)">
+        <span><h3>Installation d’un poste pour le développement
+        </h3></span>
+        <button class="toggle-btn"><span class="toggle-symbol">+</span></button>
+      </div>
+      <div class="project-details">
+        <ul>
+          <li>Travail : </li>
+          <ul>Installation d’un système d’exploitation Debian 12 et configuration dans le cadre du développement informatique</ul>
+          <li>Notions : </li>
+          <ul><li>Identifier les differents composant d'un système numérique</li>
+          <li>Utiliser les fonctionnalité de base d'un système d'exploitation</li>
+          <li>Installer et configurer un système d'exploitation et des outils de développement</li></ul>
+          <li>Compétences technique : </li>
+          <ul><li>Maitriser BASH</li>
+          <li>Utilser Un outil de carte mental (Mindmeister)</li></ul>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-card">
+      <div class="project-header" onclick="toggleDetails(this)">
+        <span><h3>Création de la base de donnée d'un bowling</h3></span>
+        <button class="toggle-btn"><span class="toggle-symbol">+</span></button>
+      </div>
+      <div class="project-details">
+        <ul>
+          <li>description rapide du travail</li>
+          <ul>Création d'une base de donnée pour un Bowling fictif avec la prise en compte des contraintes du bowling</ul>
+          <li>Notions : </li>
+          <ul><li>Mettre a jour et interroger une base de données realtionnelle</li>
+            <li>Concevoir une Base de donnée relationnelle a partir d'un cahier des charges</li>
+          </ul>
+          <li>Compétences technique</li>
+          <ul><li>Maitriser SQL</li></ul>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projet 4 -->
+    <div class="project-card">
+      <div class="project-header" onclick="toggleDetails(this)">
+        <span> <h3>Création s'un site web a destination de Troisième</h3></span>
+        <button class="toggle-btn"><span class="toggle-symbol">+</span></button>
+      </div>
+      <div class="project-details">
+        <ul>
+          <li>description rapide du travail</li>
+          <li>Notions</li>
+          <li>Compétences</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projet 5 -->
+    <div class="project-card">
+      <div class="project-header" onclick="toggleDetails(this)">
+        <span>Nom projet</span>
+        <button class="toggle-btn"><span class="toggle-symbol">+</span></button>
+      </div>
+      <div class="project-details">
+        <ul>
+          <li>description rapide du travail</li>
+          <li>Notions</li>
+          <li>Compétences</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Contactez-moi :</p>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="maceo.guicherd-callin@etu.univ-grenoble-alpes.fr">maceo.guicherd-callin@etu.univ-grenoble-alpes.fr</a></li>
+        <li><i class="fas fa-phone"></i> <a href="tel:+33624195280">+33 6 24 19 52 80</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDetails(header) {
+      const details = header.nextElementSibling;
+      const symbol = header.querySelector('.toggle-symbol');
+
+      if (details.style.maxHeight && details.style.maxHeight !== "0px") {
+        details.style.maxHeight = "0px";
+        symbol.innerText = "+";
+      } else {
+        details.style.maxHeight = details.scrollHeight + "px";
+        symbol.innerText = "−";
+      }
+    }
+  </script>
+
+</body>
+</html>
