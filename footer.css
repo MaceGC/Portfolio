@@ -16,13 +16,12 @@
     padding: 10px 20px;
     border-radius: 20px;
     transition: all 0.3s ease;
-    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
   }
 
   .footer a:hover {
     color: #4b5c6b;
     background-color: #ffcc00;
-    transform: scale(1.1);
   }
 
   .footer ul {
