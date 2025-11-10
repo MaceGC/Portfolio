@@ -1,0 +1,3 @@
+-finir formulaire contact fonctionnel
+-trouver de nouvelles idée pour améliorer l'aspect graphique
+-essayer d'ajouter du javascript
