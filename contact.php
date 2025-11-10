@@ -1,6 +1,6 @@
 <?php 
         if(isset($_POST['message'])){
-          $retour = mail('maceo.guicherd@gmail.com', 'Message depuis le portfolio de '.$_POST['Nom'],$_POST['message'].' \n pour répondre : '.$_POST['Mail'], '');
+          $retour = mail('maceo.guicherd@gmail.com', 'Message depuis le portfolio de '.$_POST['Nom'],$_POST['message']." \n pour répondre : ".$_POST['Mail'], '');
         if ($retour){
           echo '<p>Votre message a bien été envoyé.</php>';
         }
@@ -29,11 +29,11 @@
     <div class="form-container">
       <h2>Envoyer moi un message</h2>
       <form method="post">
-        <label >Nom</label>
+        <label>Nom</label>
         <input  name="Nom" placeholder="Votre nom" />
 
-        <label name="Mail">Email</label>
-        <input type="email" id="email" placeholder="email" />
+        <label>Email</label>
+        <input name="Mail" type="email" id="email" placeholder="email" />
 
         <label for="story">Message</label>
 
