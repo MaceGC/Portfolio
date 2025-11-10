@@ -1,3 +1,11 @@
+<?php 
+        if(isset($_POST['message'])){
+          $retour = mail('maceo.guicherd@gmail.com', 'Message depuis le portfolio de '.$_POST['Nom'],$_POST['message'].' \n pour répondre : '.$_POST['Mail'], '');
+        if ($retour){
+          echo '<p>Votre message a bien été envoyé.</php>';
+        }
+        }    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +15,6 @@
   <link rel="stylesheet" href="navBar.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="contact.css">
-
-
 </head>
 
 <body>
@@ -34,20 +40,12 @@
         <textarea id="message" name="message" rows="5" cols="33" placeholder="Votre Message..."></textarea>
         <button type="submit">Envoyer</button>
       </form>
-      <?php 
-        $retour = mail('maceo.guicherd@gmail.com', 'Message depuis le portfolio de '.$_POST['Nom'],$_POST['message'].' \n pour répondre : '.$_POST['Mail'], '');
-        if ($retour){
-          echo '<p>Votre message a bien été envoyé.</php>';
-        }
-?>
     </div>
   </main>
   <footer class="footer">
     <div class="footer-content">
       <a href="contact.html">Envoyez moi un message</a>
-      
-        <a href="https://github.com/macegc"><i class="fa-brands fa-github"></i></i> Mon Github</a>
-      
+      <a href="https://github.com/macegc"><i class="fa-brands fa-github"></i></i> Mon Github</a>
     </div>
   </footer>
 </body>
