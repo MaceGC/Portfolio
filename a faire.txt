@@ -1,3 +1,3 @@
--finir formulaire contact fonctionnel
+-finir formulaire contact fonctionnel : FAIT !
 -trouver de nouvelles idée pour améliorer l'aspect graphique
 -essayer d'ajouter du javascript
