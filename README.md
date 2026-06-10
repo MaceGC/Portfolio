@@ -1,11 +1,8 @@
 # Portfolio React
 
-Minimal Vite + React migration of the original static portfolio.
-
 Quick start:
 
 ```bash
-cd portfolio-react
 npm install
 npm run dev
 ```
