@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import atosLogo from '../../../image/atos-logo-png_seeklogo-257485.png'
+import atosLogo from '../../ressource/image/atos-logo-png_seeklogo-257485.png'
 
 export default function Projet(){
   const [openId, setOpenId] = useState(null)
