@@ -1,0 +1,131 @@
+h1 {
+    text-align: left;
+    margin: 40px 0 18px 48px;
+    font-size: 36px;
+    color: #ffcc00;
+    font-weight: 800;
+  }
+
+    .projects-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 24px 20px 60px 20px;
+      align-items: start;
+      box-sizing: border-box;
+    }
+
+
+
+  .project-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      color: #f8fafc;
+      padding: 20px 22px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-sizing: border-box;
+      position: relative;
+      min-height: 110px;
+      transition: transform 0.20s ease, box-shadow 0.20s ease;
+      overflow: visible;
+      backdrop-filter: blur(6px);
+  }
+
+  .project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+  }
+
+  @media (max-width: 700px) {
+      .project-card {
+        width: 100%;
+        border-radius: 10px;
+      }
+  }
+
+
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px;
+  }
+
+  .project-title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.18;
+    color: #fff;
+  }
+
+  .project-meta {
+    font-size: 13px;
+    color: rgba(255,255,255,0.72);
+    margin-top: 6px;
+  }
+
+  .project-card .toggle-btn {
+    background: rgba(255,204,0,0.12);
+    border: 1px solid rgba(255,204,0,0.18);
+    color: #1f2937;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.12s ease, background 0.12s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .project-card .toggle-btn:hover { transform: scale(1.04) }
+
+  .project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(.2,.9,.2,1);
+    padding-top: 12px;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .project-body p{ margin: 0 0 10px 0; color: rgba(255,255,255,0.88) }
+  .project-body strong {
+    color: #ffcc00;
+    font-weight: 700;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+  .project-body ul li {
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .project-details ul{
+    padding-bottom:  10px;
+    margin: 0;
+  }
+
+  .project-footer{ margin-top:12px; font-size:14px; color: rgba(255,255,255,0.9); font-weight:600 }
+
+  /* Accent helpers */
+  .accent-yellow{ color: #ffcc00 }
+
+
+  .project-details.open {
+    /* This class is optional if using JS to set height */
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .project-thumb img{ width:96px; height:64px; object-fit:cover; border-radius:8px; display:block }
+  .project-thumb{ width:96px; height:64px; flex:0 0 96px }

@@ -1,0 +1,172 @@
+header {
+    text-align: center;
+    margin-top: 20px; /* moved up */
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  /* animate welcome title when about panel opens */
+  .section header h1{
+    transition: transform 0.35s cubic-bezier(.2,.9,.3,1);
+  }
+  .section.open header h1{
+    transform: translateY(-14px);
+  }
+
+  .section {
+    text-align: center;
+    /* make the hero area fill viewport so we can position the title slightly above center */
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 6vh; /* slight push from top */
+    box-sizing: border-box;
+  }
+
+  .toggle-btn {
+    cursor: pointer;
+    background: transparent; /* remove yellow/opaque background per request */
+    border: none;
+    font-size: 18px;
+    color: #ffcc00;
+    transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    line-height: 1;
+  }
+
+  .toggle-btn:focus { outline: none }
+
+  .toggle-btn:hover {
+    transform: scale(1.2);
+  }
+
+  /* stronger icon animation: morph + -> - using two bars */
+  .toggle-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-left: 8px;
+    vertical-align: middle;
+    transform-style: preserve-3d;
+    transition: transform 0.35s ease;
+  }
+
+  .toggle-icon .bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #ffcc00;
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(.2,.9,.3,1), opacity 0.25s ease;
+    border-radius: 2px;
+  }
+
+  .toggle-icon .horizontal {
+    width: 12px;
+    height: 2px;
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(1);
+  }
+
+  .toggle-icon .vertical {
+    width: 2px;
+    height: 12px;
+    transform: translate(-50%, -50%) rotate(0deg) scaleY(1);
+  }
+
+  /* state when open: vertical shrinks and fades, horizontal slightly scales and icon flips */
+  .toggle-icon.open {
+    transform: rotateX(180deg);
+  }
+
+  .toggle-icon.open .horizontal {
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(1.2);
+  }
+
+  .toggle-icon.open .vertical {
+    transform: translate(-50%, -50%) rotate(90deg) scaleY(0);
+    opacity: 0;
+  }
+
+  .about-content {
+    margin: 20px;
+    padding: 0; /* no padding when closed to avoid visible clipped bar */
+    text-align: left;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(.2,.9,.3,1), padding 0.25s ease;
+  }
+
+.toggle-btn { margin-top: 18px }
+
+  /* when opened allow padding and large fallback height */
+  .about-content.open {
+    max-height: 2000px;
+    padding: 24px;
+    overflow: visible;
+  }
+
+  .presentation {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    padding: 22px; /* extra inner spacing so children won't touch edges */
+    border-radius: 16px; /* slightly larger radius */
+    display: flex;
+    gap: 20px;
+    background: linear-gradient(180deg, rgba(60,76,90,0.95), rgba(58,70,82,0.95));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    color: #fff;
+    overflow: visible; /* allow inner shadows / children to be visible without being clipped */
+    background-clip: padding-box;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .presentation-left{ max-width: 360px; }
+  .presentation-right{ flex:1; padding-left:12px; padding-right:20px; min-width:0 }
+
+  .avatar{ width:96px; height:96px; margin: 6px 0 12px; }
+
+  .presentation h3{ margin:0 0 6px 0; color:#ffcc00 }
+  .subtitle{ color:#e6d98a; margin:6px 0 12px 0 }
+  .bio{ color:#f3eedf; margin-bottom:12px }
+
+  .badges{ display:flex; gap:8px; flex-wrap:wrap }
+  .badge{ background: rgba(255,204,0,0.12); color:#ffcc00; padding:6px 8px; border-radius:999px; font-size:13px }
+
+  .presentation-right h4{ margin-top:6px; color:#ffcc00 }
+  .presentation-right ul{ padding-left:18px; margin-top:6px }
+
+  /* Timeline (fil) */
+  .timeline{ position:relative; padding-left:18px; margin:12px 0 0 0; list-style:none }
+  .timeline:before{ content:''; position:absolute; left:6px; top:0; bottom:0; width:2px; background: rgba(255,255,255,0.08); border-radius:2px }
+  .timeline li{ position:relative; padding:10px 12px 10px 22px; display:flex; gap:12px; align-items:flex-start }
+  .time-dot{ width:12px; height:12px; background:#ffcc00; border-radius:50%; position:absolute; left:-1px; top:16px; box-shadow:0 0 0 4px rgba(255,204,0,0.08) }
+  .time-content strong{ display:block }
+  .muted{ color: #e6d98a; font-size:13px; margin-top:4px }
+
+  /* Passions improved */
+  .passions{ display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap:12px; padding-left:0; margin-top:8px; min-width:0; overflow:visible }
+  .passion-item{ list-style:none; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); padding:10px 12px; border-radius:12px; text-align:center; font-weight:600; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display:flex; align-items:center; gap:8px; justify-content:center; margin:0; min-width:0; box-sizing:border-box; overflow:visible; white-space:normal }
+  .passion-item i{ color:#ffd966; font-size:16px; flex:0 0 20px; width:20px; display:inline-flex; align-items:center; justify-content:center }
+  .passion-item > span{ display:inline-block; vertical-align:middle }
+  .passion-item:hover{ transform: translateY(-4px); transition: transform 0.18s ease }
+
+  .info {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top: 50px;
+
+  }
