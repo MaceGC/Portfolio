@@ -3,8 +3,10 @@ import atosLogo from '../../ressource/image/atos-logo-png_seeklogo-257485.png'
 import tri from '../../ressource/image/algoTri.png'
 import bowlingLogo from '../../ressource/image/bowlingLogo.jpg'
 import debianLogo from '../../ressource/image/debianLogo.png'
+import logoSatable from '../../ressource/image/LogoSatable.png'
 import postgresLogoRaw from '../../ressource/image/postgresql.svg?raw'
 import javaFXLogoRaw from '../../ressource/image/JavaFXLogo.svg?raw'
+import junit5 from '../../ressource/image/junit.svg?raw'
 
 export default function Projet(){
   const [openIds, setOpenIds] = useState(new Set())
@@ -29,7 +31,8 @@ export default function Projet(){
       'R Markdown': { class: 'fa-solid', icon: 'fa-markdown' },
       'SceneBuilder': { class: 'fa-solid', icon: 'fa-cube' },
       'Debian': { class: 'fa-brands', icon: 'fa-linux' },
-      'Postgres': { class: 'svg', icon: postgresLogoRaw }
+      'Postgres': { class: 'svg', icon: postgresLogoRaw },
+      'Junit5': { class: 'svg', icon: junit5}
     }
     
     return icons[tech] || { class: 'fa-solid', icon: 'fa-gear' }
@@ -48,7 +51,7 @@ export default function Projet(){
     if(id === 2) return debianLogo
     if(id === 3) return bowlingLogo
     if(id === 4) return atosLogo
-    
+    if(id === 5) return logoSatable
     const initials = (title||'').split(' ').slice(0,2).map(s=>s[0]).join('').toUpperCase() || 'PR'
     const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='160' height='100'><rect width='100%' height='100%' rx='8' fill='%23eef2ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='32' fill='%230b1720'>${initials}</text></svg>`
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`
@@ -162,7 +165,11 @@ export default function Projet(){
             </ul>
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['Java', 'Git'])}
-            <p className="project-footer">Équipe de 2 — rôle : méthode des K plus proches voisins et outillage des fonctions pour comparaison</p>
+            <p className="project-footer">Équipe de 2 — rôle :Nous avons implémenté et testé différent moyen de trier des dépêches, 
+              dans le langage Java. Nous avons dû commencer par créer les algorithmes et 
+              d’ensuite calculer leurs coûts algorithmiques ainsi que de les outiller afin de 
+              voir leurs temps d'exécution et pouvoir les comparer.
+               Un autre critère pour les comparer a été le taux de réussite de chaque méthode.</p>
           </div>
         </div>
       </div>
@@ -190,7 +197,9 @@ export default function Projet(){
             </ul>
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['Bash', 'Postgres', 'Debian'])}
-            <p className="project-footer">Projet individuel — installation, configuration KDE/Plasma, création d'un super-utilisateur et mise en place d'outils de développement.</p>
+            <p className="project-footer">Projet individuel dans laquelle j’ai dû installer et paramétrer un système d’exploitation Linux Debian 12. Une fois fait, j’ai mis en place l’environnement graphique KDE/Plasma.
+               Enfin, j’ai créé un super utilisateur afin de pouvoir administrer le système et notamment d’installer d'autres logiciels pour le développement comme IntelliJ à l'aide de package snap, flatpak ou encore apt.
+              J’ai également créé une carte mentale des étapes à suivre pour réaliser ce projet en utilisant l’outil Mindmeister.</p>
           </div>
         </div>
       </div>
@@ -244,7 +253,13 @@ export default function Projet(){
             </ul>
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['HTML', 'CSS', 'Git'])}
-            <p className="project-footer">Équipe de 4 — rôle : recueil et mise en forme des informations, participation à la page d'accueil.</p>
+            <p className="project-footer">Travail en groupe : <br/>
+            Nous avons commencé par chercher tous les besoins du site en se basant sur le site officiel d’Atos. 
+            Nous avons ensuite rassemblé et vulgarisé ces informations dans un recueil de besoin.
+             L’étape suivante a été de créer un mockup du site et enfin de le réaliser. <br/>
+            Travail personnelle :<br/>
+            Je me suis chargé de rassembler les informations vulgarisées dans le recueil et de la mire en forme de ce dernier. 
+            Pour la réalisation du site j’ai principalement participé à la page d'accueil et une parti des pages d’informations.</p>
           </div>
         </div>
       </div>
@@ -263,16 +278,32 @@ export default function Projet(){
         </div>
         <div ref={el=>detailsRefs.current[5]=el} className={`project-details ${openIds.has(5)? 'open':''}`} style={{maxHeight:'0px'}}>
           <div className="project-body">
-            <p>Conception et développement d'un outil d’aide à l’organisation d’événements — analyses, conception, réalisation du logiciel et livrables (3 dossiers).</p>
+            <p>Conception et développement d'un outil d’aide à l’organisation de banquets — analyses, conception, réalisation du logiciel et livrables (3 dossiers).</p>
             <strong>Notions :</strong>
             <ul>
-              <li>Conception, tests et interfaces utilisateur</li>
-              <li>Gestion de projet et travail en équipe</li>
-              <li>Formaliser des outils mathématiques pour l'informatique</li>
+              <li>implémenter des Conceptions simples</li>
+              <li>Élaborer des Conceptions simples</li>
+              <li>Faire des essais et évaluer leurs résultats en regard des spécifications</li>
+              <li>Développer des interfaces utilisateur</li>
+              <li>Analyser un problème avec méthode (découpage éléments algorithmiques simples, structure donnée...).</li>
+              <li>Formaliser et mettre en œuvre des outils mathématiques pour l’informatique</li>
+              <li>Appréhender les besoins du client et de l'utilisateur</li>
+              <li>Mettre en place les outils de gestion de projet</li>
+              <li>Identifier les acteurs et les différentes phases d’un cycle de développement</li>
+              <li>Identifier les statuts, les fonctions et les rôles de chaque membre d’une équipe </li>
+              <li>Acquérir les compétences interpersonnelles pour travailler en équipe</li>
             </ul>
             <strong>Compétences techniques :</strong>
-            {renderTechBadges(['UML', 'Java', 'JavaFX'])}
-            <p className="project-footer">Équipe de 6 — rôle : chef de projet, coordination et implication sur les rendus mathématiques et l'interface.</p>
+            {renderTechBadges(['UML', 'Java', 'JavaFX','Git','Junit5'])}
+            <p className="project-footer">Travail en groupe : <br/>
+            Ce projet s’est décomposé en plusieurs étapes, comprenant 3 dossiers à rendre,
+             deux analyses de problème mathématique à résoudre dans un premier temps. 
+             Et la réalisation du logiciel dans un second temps. Les 3 dossiers comprennent : 
+             un dossier sur la gestion du projet, un dossier sur la conception/modélisation et un dossier sur l’interface homme-machine. <br/>
+            Travail personnel :<br/>
+            J’ai pris le rôle de chef de projet au sein de l'équipe. 
+            Mon rôle a donc été de diviser efficacement la charge de travail entre tous les membres de l’équipe ainsi que de rythmer le travail tout au long du projet. 
+            Concernant les différents points du projet, je me suis particulièrement impliqué dans les rendus de math ainsi que dans le dossier interface homme-machine.</p>
           </div>
         </div>
       </div>
