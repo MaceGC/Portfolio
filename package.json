@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",
-    "vite": "^8.0.16"
+    "vite": "^7.0.0"
   },
   "description": "Minimal Vite + React migration of the original static portfolio.",
   "main": "index.js",
