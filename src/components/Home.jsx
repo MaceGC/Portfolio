@@ -69,14 +69,13 @@ export default function Home(){
           <div className="presentation-left">
             
             <h3>Macéo GUICHERD-CALLIN</h3>
-            <p className="subtitle">Étudiant en 2ème année BUT Informatique — IUT2 Grenoble</p>
-            <p className="bio">Etudiant en BUT informatique parcours réalisation d'applications.</p>
+            <p className="subtitle">Étudiant en 2ème année BUT Informatique parcours réalisation d'applications — IUT2 Grenoble</p>
 
              <section>
               <h4>Passions</h4>
               <ul className="passions">
                 <li className="passion-item"><i className="fa-solid fa-film" aria-hidden="true"></i> Cinéma</li>
-                <li className="passion-item"><i className="fa-solid fa-hiking" aria-hidden="true"></i> Escalade</li>
+                <li className="passion-item"><i className="fa-solid fa-guitar" aria-hidden="true"></i> Guitare</li>
                 <li className="passion-item"><i className="fa-solid fa-book" aria-hidden="true"></i> Littérature</li>
                 <li className="passion-item"><i className="fa-solid fa-theater-masks" aria-hidden="true"></i> Théâtre</li>
                 <li className="passion-item"><i className="fa-solid fa-gamepad" aria-hidden="true"></i> Jeux‑Vidéo</li>
