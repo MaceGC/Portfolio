@@ -26,11 +26,15 @@ body {
     color: #ffcc00;
     padding: 10px 20px;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
   }
   
   .nav-link.active {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #4b5c6b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   }
   nav {
     background-color: #4b5c6b;
@@ -51,7 +55,6 @@ body {
   }
 
   nav a:hover {
-    background-color: #ffcc00;
-    color: #4b5c6b;
-    transform: scale(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   }
