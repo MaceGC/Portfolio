@@ -11,6 +11,10 @@ import JS from '../../ressource/image/js_Logo.png'
 import PHP from '../../ressource/image/PHPLogo.svg.png'
 import ReactLogo from '../../ressource/image/reactLogo.png'
 import aidéméLogo from '../../ressource/image/AidéméLogo.png'
+import androidScreen from '../../ressource/image/androidScreen.png'
+import androidLogo from '../../ressource/image/AndroidLogo.png'
+import symfonyLogo from '../../ressource/image/symfonyLogo.png'
+import cypressLogo from '../../ressource/image/cypressLogo.png'
 
 export default function Projet(){
   const [openIds, setOpenIds] = useState(new Set())
@@ -39,7 +43,10 @@ export default function Projet(){
       'SceneBuilder': { class: 'fa-solid', icon: 'fa-cube' },
       'Debian': { class: 'fa-brands', icon: 'fa-linux' },
       'Postgres': { class: 'svg', icon: postgresLogoRaw },
-      'Junit5': { class: 'svg', icon: junit5}
+      'Junit5': { class: 'svg', icon: junit5},
+      'Android': { class: 'fa-brands', icon: 'fa-android' },
+      'Symfony': { class: 'fa-brands', icon: 'fa-symfony' },
+      'Cypress': { class: 'fa-brands', icon: 'fa-cypress' },
     }
     
     return icons[tech] || { class: 'fa-solid', icon: 'fa-gear' }
@@ -60,6 +67,7 @@ export default function Projet(){
     if(id === 4) return atosLogo
     if(id === 5) return logoSatable
     if(id === 6) return aidéméLogo
+    if(id === 7) return androidScreen
     const initials = (title||'').split(' ').slice(0,2).map(s=>s[0]).join('').toUpperCase() || 'PR'
     const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='160' height='100'><rect width='100%' height='100%' rx='8' fill='%23eef2ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='32' fill='%230b1720'>${initials}</text></svg>`
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`
@@ -354,6 +362,49 @@ export default function Projet(){
             Nous avons enfin développé l’application. Nous avons définie des fonctionalités essentielles tels que 
             le suivi de la personne dépandante, une gestion de calendrier et de contact, un coffre fort pour les documents importants 
             et une galerie photo. <br/>
+            <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="project-card" onClick={()=>toggle(7)} style={{cursor:'pointer'}}>
+        <div className="project-header">
+          <div style={{display:'flex',alignItems:'center',gap:12}}>
+            <div className="project-thumb"><img src={getThumb(7,'Améliorations d\'une application mobile de recherche de stage')} alt="thumb"/></div>
+            <div>
+              <h3 className="project-title">Améliorations d'une application mobile de recherche de stage</h3>
+            </div>
+          </div>
+          <div style={{display:'flex',gap:8,alignItems:'center'}}>
+            <button className="toggle-btn" onClick={(e)=>{e.stopPropagation(); toggle(7);}} aria-expanded={openIds.has(7)}>{openIds.has(7)? '−' : '+'}</button>
+          </div>
+        </div>
+        <div ref={el=>detailsRefs.current[7]=el} className={`project-details ${openIds.has(7)? 'open':''}`} style={{maxHeight:'0px'}}>
+          <div className="project-body">
+            <p>Analyse et amélioration d'une application android et d'un back-office de gestion derecherche de stage</p>
+            <strong>Notions :</strong>
+            <ul>
+              <li>Vérifier et valider	la qualité	de l’application	par	les	tests</li>
+              <li>	Appliquer	des	principes	d’accessibilité	et	d’ergonomie</li>
+              <li>	Adopter	de	bonnes	pratiques	de	conception	et	de	programmation</li>
+              <li>	Choisir	des	structures	de	données	complexes	adaptées	au	problème</li>
+              <li>	Comprendre	les	enjeux	et	moyens	de	sécurisation	des	données	et	du	code</li>
+              <li>	Utiliser	des	serveurs	et	des	services	réseaux	virtualisés</li>
+              <li>	Assurer	la	sécurité	des	données	(intégrité	et	confidentialité)</li>
+              <li>	Manipuler	des	données	hétérogènes</li>
+              <li>	Formaliser	les	besoins	du	client	et	de	l'utilisateur</li>
+              <li>	Identifier	les	critères	de	faisabilité	d’un	projet	informatique</li>
+              <li>	Définir	et	mettre	en	œuvre	une	démarche	de	suivi	de	projet</li>
+              <li>	Organiser	la	restitution	de	données	à	travers	la	programmation	et	la	visualisation</li>
+            </ul>
+            <strong>Compétences techniques :</strong>
+            {renderTechBadges([ 'Symfony', 'JavaScript','Java', 'Git','Android','PHP','SQL','Postgres','Cypress'])}
+            <p className="project-footer">Travail en groupe : <br/>
+           Nous avon commencé par analyser l'application existante et identifier les domaines d'amélioration.
+           Il a ensuite fallu choisir différents critère de qualité de la normes ISO 25010 à améliorer.
+           Nous avons choisit d'améliorer la facilité d'apprentissage, l'aptitude, la stabilité et l'analysabilité.
+           Notre équipe s'est ensuite diviser en sous-groupes pour travailler sur chaque aspect.<br/>
             <br/>
             </p>
           </div>
