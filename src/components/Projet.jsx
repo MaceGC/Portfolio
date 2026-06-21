@@ -7,6 +7,10 @@ import logoSatable from '../../ressource/image/LogoSatable.png'
 import postgresLogoRaw from '../../ressource/image/postgresql.svg?raw'
 import javaFXLogoRaw from '../../ressource/image/JavaFXLogo.svg?raw'
 import junit5 from '../../ressource/image/junit.svg?raw'
+import JS from '../../ressource/image/js_Logo.png'
+import PHP from '../../ressource/image/PHPLogo.svg.png'
+import ReactLogo from '../../ressource/image/reactLogo.png'
+import aidéméLogo from '../../ressource/image/AidéméLogo.png'
 
 export default function Projet(){
   const [openIds, setOpenIds] = useState(new Set())
@@ -22,6 +26,9 @@ export default function Projet(){
       'SQL': { class: 'fa-solid', icon: 'fa-database' },
       'HTML': { class: 'fa-brands', icon: 'fa-html5' },
       'CSS': { class: 'fa-brands', icon: 'fa-css3-alt' },
+      'JavaScript': { class: 'fa-brands', icon: 'fa-js' },
+      'PHP': { class: 'fa-brands', icon: 'fa-php' },
+      'React': { class: 'fa-brands', icon: 'fa-react' },
       'UML': { class: 'fa-solid', icon: 'fa-diagram-project' },
       'JavaFX': { class: 'svg', icon: javaFXLogoRaw },
       'draw.io': { class: 'fa-solid', icon: 'fa-pen-ruler' },
@@ -52,6 +59,7 @@ export default function Projet(){
     if(id === 3) return bowlingLogo
     if(id === 4) return atosLogo
     if(id === 5) return logoSatable
+    if(id === 6) return aidéméLogo
     const initials = (title||'').split(' ').slice(0,2).map(s=>s[0]).join('').toUpperCase() || 'PR'
     const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='160' height='100'><rect width='100%' height='100%' rx='8' fill='%23eef2ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='32' fill='%230b1720'>${initials}</text></svg>`
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`
@@ -304,6 +312,50 @@ export default function Projet(){
             J’ai pris le rôle de chef de projet au sein de l'équipe. 
             Mon rôle a donc été de diviser efficacement la charge de travail entre tous les membres de l’équipe ainsi que de rythmer le travail tout au long du projet. 
             Concernant les différents points du projet, je me suis particulièrement impliqué dans les rendus de math ainsi que dans le dossier interface homme-machine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="project-card" onClick={()=>toggle(6)} style={{cursor:'pointer'}}>
+        <div className="project-header">
+          <div style={{display:'flex',alignItems:'center',gap:12}}>
+            <div className="project-thumb"><img src={getThumb(6,'Développement d\'une application web pour les aidants familiaux')} alt="thumb"/></div>
+            <div>
+              <h3 className="project-title">Développement d'une application web pour les aidants familiaux</h3>
+            </div>
+          </div>
+          <div style={{display:'flex',gap:8,alignItems:'center'}}>
+            <button className="toggle-btn" onClick={(e)=>{e.stopPropagation(); toggle(6);}} aria-expanded={openIds.has(6)}>{openIds.has(6)? '−' : '+'}</button>
+          </div>
+        </div>
+        <div ref={el=>detailsRefs.current[6]=el} className={`project-details ${openIds.has(6)? 'open':''}`} style={{maxHeight:'0px'}}>
+          <div className="project-body">
+            <p>Conception et développement de l'application web full-stack "Aidémé" pour les aidants familiaux — analyses, conception, réalisation de l'application.</p>
+            <strong>Notions :</strong>
+            <ul>
+              <li>Élaborer	et	implémenter	les	spécifications	fonctionnelles	et	non	fonctionnelles	à	partir	des	exigences</li>
+              <li>	Appliquer	des	principes	d’accessibilité	et	d’ergonomie</li>
+              <li>	Adopter	de	bonnes	pratiques	de	conception	et	de	programmation</li>
+              <li>	Choisir	des	structures	de	données	complexes	adaptées	au	problème</li>
+              <li>	Comprendre	les	enjeux	et	moyens	de	sécurisation	des	données	et	du	code</li>
+              <li>	Utiliser	des	serveurs	et	des	services	réseaux	virtualisés</li>
+              <li>	Assurer	la	sécurité	des	données	(intégrité	et	confidentialité)</li>
+              <li>	Manipuler	des	données	hétérogènes</li>
+              <li>	Formaliser	les	besoins	du	client	et	de	l'utilisateur</li>
+              <li>	Identifier	les	critères	de	faisabilité	d’un	projet	informatique</li>
+              <li>	Définir	et	mettre	en	œuvre	une	démarche	de	suivi	de	projet</li>
+            </ul>
+            <strong>Compétences techniques :</strong>
+            {renderTechBadges(['UML', 'HTML', 'CSS', 'JavaScript', 'Git', 'React','PHP','SQL','Postgres',])}
+            <p className="project-footer">Travail en groupe : <br/>
+            Nous avons commencé par réaliser un cahier des charges pour notre projet à partir 
+            d’exigence fonctionnelle et non fonctionnelle.
+            Nous avons ensuite créé un dossier de préconception explicitant nos choix techniques et l’organisation du projet.
+            Nous avons enfin développé l’application. Nous avons définie des fonctionalités essentielles tels que 
+            le suivi de la personne dépandante, une gestion de calendrier et de contact, un coffre fort pour les documents importants 
+            et une galerie photo. <br/>
+            <br/>
+            </p>
           </div>
         </div>
       </div>
