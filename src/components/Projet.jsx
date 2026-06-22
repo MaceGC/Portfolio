@@ -181,7 +181,7 @@ export default function Projet(){
             </ul>
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['Java', 'Git'])}
-            <p className="project-footer">Équipe de 2 — rôle :Nous avons implémenté et testé différent moyen de trier des dépêches, 
+            <p className="project-footer">Équipe de 2 — rôle : nous avons implémenté et testé différents moyens de trier des dépêches
               dans le langage Java. Nous avons dû commencer par créer les algorithmes et 
               d’ensuite calculer leurs coûts algorithmiques ainsi que de les outiller afin de 
               voir leurs temps d'exécution et pouvoir les comparer.
@@ -213,9 +213,9 @@ export default function Projet(){
             </ul>
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['Bash', 'Postgres', 'Debian'])}
-            <p className="project-footer">Projet individuel dans laquelle j’ai dû installer et paramétrer un système d’exploitation Linux Debian 12. Une fois fait, j’ai mis en place l’environnement graphique KDE/Plasma.
-               Enfin, j’ai créé un super utilisateur afin de pouvoir administrer le système et notamment d’installer d'autres logiciels pour le développement comme IntelliJ à l'aide de package snap, flatpak ou encore apt.
-              J’ai également créé une carte mentale des étapes à suivre pour réaliser ce projet en utilisant l’outil Mindmeister.</p>
+            <p className="project-footer">Projet individuel dans lequel j’ai dû installer et paramétrer un système d’exploitation Linux Debian 12. Une fois fait, j’ai mis en place l’environnement graphique KDE Plasma.
+               Enfin, j’ai créé un super utilisateur afin de pouvoir administrer le système et notamment d’installer d'autres logiciels pour le développement, comme IntelliJ, à l'aide de package snap, flatpak ou encore apt.
+              J’ai également créé une carte mentale des étapes à suivre pour réaliser ce projet en utilisant l’outil MindMeister.</p>
           </div>
         </div>
       </div>
@@ -270,12 +270,12 @@ export default function Projet(){
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['HTML', 'CSS', 'Git'])}
             <p className="project-footer">Travail en groupe : <br/>
-            Nous avons commencé par chercher tous les besoins du site en se basant sur le site officiel d’Atos. 
-            Nous avons ensuite rassemblé et vulgarisé ces informations dans un recueil de besoin.
-             L’étape suivante a été de créer un mockup du site et enfin de le réaliser. <br/>
-            Travail personnelle :<br/>
-            Je me suis chargé de rassembler les informations vulgarisées dans le recueil et de la mire en forme de ce dernier. 
-            Pour la réalisation du site j’ai principalement participé à la page d'accueil et une parti des pages d’informations.</p>
+            Nous avons commencé par chercher tous les besoins du site en nous basant sur le site officiel d’Atos. 
+            Nous avons ensuite rassemblé et vulgarisé ces informations dans un recueil de besoins.
+            L’étape suivante a été de créer un mockup du site et, enfin, de le réaliser. <br/>
+            Travail personnel :<br/>
+            Je me suis chargé de rassembler les informations vulgarisées dans le recueil et de la mise en forme de ce dernier. 
+            Pour la réalisation du site, j’ai principalement participé à la page d'accueil et à une partie des pages d’informations.</p>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@ export default function Projet(){
             <p>Conception et développement d'un outil d’aide à l’organisation de banquets — analyses, conception, réalisation du logiciel et livrables (3 dossiers).</p>
             <strong>Notions :</strong>
             <ul>
-              <li>implémenter des Conceptions simples</li>
+              <li>Implémenter des Conceptions simples</li>
               <li>Élaborer des Conceptions simples</li>
               <li>Faire des essais et évaluer leurs résultats en regard des spécifications</li>
               <li>Développer des interfaces utilisateur</li>
@@ -341,7 +341,7 @@ export default function Projet(){
             <p>Conception et développement de l'application web full-stack "Aidémé" pour les aidants familiaux — analyses, conception, réalisation de l'application.</p>
             <strong>Notions :</strong>
             <ul>
-              <li>Élaborer	et	implémenter	les	spécifications	fonctionnelles	et	non	fonctionnelles	à	partir	des	exigences</li>
+              <li>Élaborer	et	implémenter	les	spécifications	fonctionnelles	et	non-fonctionnelles	à	partir	des	exigences</li>
               <li>	Appliquer	des	principes	d’accessibilité	et	d’ergonomie</li>
               <li>	Adopter	de	bonnes	pratiques	de	conception	et	de	programmation</li>
               <li>	Choisir	des	structures	de	données	complexes	adaptées	au	problème</li>
@@ -356,12 +356,12 @@ export default function Projet(){
             <strong>Compétences techniques :</strong>
             {renderTechBadges(['UML', 'HTML', 'CSS', 'JavaScript', 'Git', 'React','PHP','SQL','Postgres',])}
             <p className="project-footer">Travail en groupe : <br/>
-            Nous avons commencé par réaliser un cahier des charges pour notre projet à partir 
+           Nous avons commencé par réaliser un cahier des charges pour notre projet à partir 
             d’exigence fonctionnelle et non fonctionnelle.
             Nous avons ensuite créé un dossier de préconception explicitant nos choix techniques et l’organisation du projet.
-            Nous avons enfin développé l’application. Nous avons définie des fonctionalités essentielles tels que 
-            le suivi de la personne dépandante, une gestion de calendrier et de contact, un coffre fort pour les documents importants 
-            et une galerie photo. <br/>
+            Nous avons enfin développé l’application. Nous avons défini des fonctionnalités essentielles telles que 
+            le suivi de la personne dépendante, une gestion de calendrier et de contact, un coffre-fort pour les documents importants 
+            et une galerie photo.  <br/>
             <br/>
             </p>
           </div>
@@ -382,7 +382,7 @@ export default function Projet(){
         </div>
         <div ref={el=>detailsRefs.current[7]=el} className={`project-details ${openIds.has(7)? 'open':''}`} style={{maxHeight:'0px'}}>
           <div className="project-body">
-            <p>Analyse et amélioration d'une application android et d'un back-office de gestion derecherche de stage</p>
+            <p>Analyse et amélioration d'une application Android et d'un back-office de gestion derecherche de stage</p>
             <strong>Notions :</strong>
             <ul>
               <li>Vérifier et valider	la qualité	de l’application	par	les	tests</li>
@@ -401,10 +401,10 @@ export default function Projet(){
             <strong>Compétences techniques :</strong>
             {renderTechBadges([ 'Symfony', 'JavaScript','Java', 'Git','Android','PHP','SQL','Postgres','Cypress'])}
             <p className="project-footer">Travail en groupe : <br/>
-           Nous avon commencé par analyser l'application existante et identifier les domaines d'amélioration.
-           Il a ensuite fallu choisir différents critère de qualité de la normes ISO 25010 à améliorer.
-           Nous avons choisit d'améliorer la facilité d'apprentissage, l'aptitude, la stabilité et l'analysabilité.
-           Notre équipe s'est ensuite diviser en sous-groupes pour travailler sur chaque aspect.<br/>
+           Nous avons commencé par analyser l'application existante et identifier les domaines d'amélioration.
+           Il a ensuite fallu choisir différents critères de qualité de la norme ISO 25010 à améliorer.
+           Nous avons choisi d'améliorer la facilité d'apprentissage, l'aptitude, la stabilité et l'analysabilité.
+           Notre équipe s'est ensuite divisée en sous-groupes pour travailler sur chaque aspect.<br/>
             <br/>
             </p>
           </div>
